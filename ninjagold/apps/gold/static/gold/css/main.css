@@ -1,0 +1,74 @@
+body {
+  background-color: #57a8a8;
+  font-family: sans-serif;
+}
+
+h4, h1 {
+  margin-left: 20px;
+}
+
+h5 {
+  font-size: 14px
+}
+
+
+p {
+  font-size: 10px;
+  font-style: italic;
+}
+
+h5, p {
+  width: 100px;
+}
+
+.center {
+  width: 1200px;
+  height: 100px;
+  padding: 20px;
+}
+
+.actions {
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2d5e5e;
+  display: inline-block;
+  width: 100px;
+  height: 110px;
+  background-color: #adf7f7;
+  color: #2d5e5e;
+}
+
+#subtitle {
+  font-size: 8px;
+}
+
+.activities {
+  margin-top: 50px;
+}
+
+#log {
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2d5e5e;
+  display: inline-block;
+  width: 480px;
+  margin-left: 20px;
+  background-color: #adf7f7;
+  color: #2d5e5e;
+}
+
+#log p {
+  width: 460px;
+  text-align: left;
+  font-size: 12px;
+}
+.reset {
+  margin-top: 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'gold/css/main.css' %}" media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <h1> Ninja Gold </h1>
+      <h4> Your Gold: {{goldcount}} </h4>
+    </header>
+
+    <div class="center">
+      <div class="actions"><form action="/process" method="post">
+        {% csrf_token %}
+        <h5>Farm</h5>
+        <p>(earns 10-20 golds)</p>
+        <p><button type="submit" name="button" value="farm">Find Gold!</button></p>
+      </form></div>
+
+      <div class="actions"><form action="/process" method="post">
+        {% csrf_token %}
+        <h5>Cave</h5>
+        <p>(earns 5-10 golds)</p>
+        <p><button type="submit" name="button" value="cave">Find Gold!</button></p>
+      </form></div>
+
+      <div class="actions"><form action="/process" method="post">
+        {% csrf_token %}
+        <h5>House</h5>
+        <p>(earns 2-5 golds)</p>
+        <p><button type="submit" name="button" value="house">Find Gold!</button></p>
+      </form></div>
+
+      <div class="actions"><form action="/process" method="post">
+        {% csrf_token %}
+        <h5>Casino</h5>
+        <p>(earns/takes 50 golds)</p>
+        <p><button type="submit" name="button" value="casino">Find Gold!</button></p>
+      </form></div>
+
+
+    </div>
+
+
+
+    <div class="activities">
+    <h4>Activites:</h4>
+      <div id=log>
+        <table>
+          <thead></thead>
+          <tbody>
+        {% for entry in log %}
+          <tr>
+            <td>
+              <p>You {{ entry.earned }} {{ entry.gold }} gold at the {{ entry.location }}.</p>
+            </td>
+          </tr>
+        {% endfor %}
+          </tbody>
+      </table>
+      </div>
+    </div>
+
+    <form action="/reset" method="post">
+      {% csrf_token %}
+      <button class="reset" type="submit" name="button" value="reset">Reset</button>
+    </form>
+
+  </body>
+</html>
